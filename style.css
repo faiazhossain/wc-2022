@@ -207,7 +207,19 @@ html {
 }
 .footer-link:hover {
   color: rgb(0, 255, 217);
-  font-size: 1.3em;
+  /* font-size: 1.3em; */
+  transition: 1s;
+  transform: scale(1.2, 1.2);
+}
+.social-icon {
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  column-gap: 20px;
+}
+
+.social-icon a {
+  color: rgb(255, 255, 255);
 }
 
 /* -----------------------Footer ends-------------------- */
@@ -258,7 +270,7 @@ html {
     width: 100%;
   }
   .blog-box-btn {
-    width: auto;
+    width: 100px;
     font-size: 0.9rem;
   }
   .player-news-container {
@@ -303,9 +315,9 @@ html {
     color: silver;
     font-size: 0.7rem;
   }
-  .footer-link:hover {
-    color: rgb(0, 255, 217);
-    font-size: 0.9rem;
+
+  .social-icon {
+    flex-direction: column;
   }
 }
 /*--------------------- Media Query for extra small Mobile Devices ends----------- */
@@ -403,9 +415,9 @@ html {
     color: silver;
     font-size: 1rem;
   }
-  .footer-link:hover {
-    color: rgb(0, 255, 217);
-    font-size: 1.3em;
+
+  .social-icon a {
+    font-size: 18px;
   }
 }
 /*--------------------- Media Query for Mobile Devices ends----------- */
@@ -504,10 +516,6 @@ html {
     color: silver;
     font-size: 1rem;
   }
-  .footer-link:hover {
-    color: rgb(0, 255, 217);
-    font-size: 1.3em;
-  }
 }
 /*----------------------- Media Query for Tablets,high  Ipads ends -----------------------*/
 
@@ -530,8 +538,20 @@ html {
   .header-blog button {
     width: 30%;
   }
+  .player-news:hover {
+    background-color: #8dcafc;
+    transition: 1s;
+    transform: scale(1.1, 1.1);
+  }
   .view-more {
     display: none;
+  }
+  .social-icon a {
+    font-size: 28px;
+  }
+  .social-icon a :hover {
+    font-size: 34px;
+    color: aqua;
   }
 }
 /*------------------ Media Query for Laptops and Desktops ends--------------------- */

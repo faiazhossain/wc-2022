@@ -55,4 +55,8 @@
 }
 
 @media screen and (min-width: 1025px) {
+  .team-schedule:hover {
+    transition: 1s;
+    transform: scale(1.1, 1.1);
+  }
 }
