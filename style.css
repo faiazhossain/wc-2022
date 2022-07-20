@@ -15,6 +15,7 @@ html {
 * {
   font-family: "rubik", sans-serif;
   box-sizing: border-box;
+  /* font-size: 1.2rem; */
   margin: 0;
 }
 .body {
@@ -129,7 +130,7 @@ html {
 }
 .player-news {
   width: 95%;
-  height: 340px;
+  height: auto;
   /* gap: 30px; */
   background-color: white;
   box-shadow: 0px 0px 6px rgb(112, 112, 112);
@@ -148,7 +149,7 @@ html {
   flex-direction: column;
   gap: 14px;
 }
-.transfer-btn {
+.article-btn {
   width: 35%;
   color: white;
   background-color: #02364f;
@@ -189,7 +190,7 @@ html {
   font-size: 1.4rem;
 }
 .footer-hr {
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #b9b9b9;
   width: 70%;
 }
 .footer-links {
@@ -273,15 +274,51 @@ html {
   }
   .player-news-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 92%;
+    margin: 20px 0;
   }
+  .player-news {
+    height: auto;
+  }
+  .player-news img {
+    height: 200px;
+  }
+  .article-btn {
+    width: 180px;
+  }
+
   .player-extra {
     display: none;
   }
   .view-more {
     display: block;
+    margin-bottom: 20px;
   }
+
   .footer {
-    display: none;
+    padding: 50px;
+    gap: 16px;
+  }
+  .footer-head {
+    font-size: 0.9rem;
+  }
+  .footer-hr {
+    width: 90%;
+  }
+  .footer-links {
+    column-gap: 12px;
+
+    justify-content: center;
+  }
+  .footer-link {
+    text-decoration: none;
+    color: silver;
+    font-size: 0.7rem;
+  }
+  .footer-link:hover {
+    color: rgb(0, 255, 217);
+    font-size: 1.3em;
   }
 }
 /*----------------------- Media Query for Tablets,high  Ipads ends -----------------------*/
