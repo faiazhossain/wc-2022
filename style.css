@@ -5,6 +5,13 @@ font-family: 'Rubik', sans-serif;
 font-family: 'Ubuntu', sans-serif; 
 */
 /*---------------- general style start------------------------------------------ */
+html {
+  background-image: linear-gradient(
+    180deg,
+    rgb(199, 227, 255),
+    rgb(255, 255, 255)
+  );
+}
 * {
   font-family: "rubik", sans-serif;
   box-sizing: border-box;
@@ -17,9 +24,10 @@ font-family: 'Ubuntu', sans-serif;
     rgb(255, 255, 255)
   );
 }
+
 .main-container {
   max-width: 1280px;
-  margin: 10px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -29,35 +37,29 @@ font-family: 'Ubuntu', sans-serif;
   flex: 1 1 auto;
   align-items: center;
   gap: 30px;
-  padding: 0 30px;
+  padding: 0 50px;
   border-radius: 14px;
   /* opacity: 0.9; */
   transition: 1s;
   background-image: linear-gradient(120deg, #000428, #004e92);
 }
-#header:hover {
-  background-image: linear-gradient(120deg, #004e92, #030a4d);
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 1;
-  font-size: large;
-}
+
 .header-blog {
   width: 50%;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 30px;
 }
-.header-blog h1 {
+.header-blog-h1 {
   font-family: "Ubuntu", sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   color: aqua;
 }
 .header-blog p {
   color: rgb(254, 254, 254);
   font-size: 1.2em;
 }
-.header-blog button {
+.header-blog-button {
   padding: 10px;
   border-radius: 10px;
   background-image: linear-gradient(rgb(97, 145, 169), rgb(63, 63, 198));
@@ -65,13 +67,18 @@ font-family: 'Ubuntu', sans-serif;
   opacity: 0.6;
   transition: 0.8s;
   width: 20%;
+  margin-top: 10px;
 }
 .header-blog button:hover {
   background-image: linear-gradient(rgb(0, 157, 255), rgb(39, 144, 186));
   opacity: 1;
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(0, 255, 89);
+  border: 2px solid rgb(0, 255, 89);
   /* color: #00f2ff; */
 }
-.header-img img {
+.header-blog-img {
   width: 100%;
 }
 
@@ -92,39 +99,77 @@ font-family: 'Ubuntu', sans-serif;
   border-radius: 10px;
   align-items: center;
   gap: 20px;
-  background-color: #000428;
+  background-color: #00224e;
   margin: 20px 0;
 }
 .blog-box-btn {
+  text-align: center;
+  text-decoration: none;
   color: white;
   width: 70%;
   padding: 10px;
   border-radius: 10px;
   background-image: linear-gradient(120deg, #98a0e0, #004e92);
 }
-
+.blog-box-btn:hover {
+  background-image: linear-gradient(rgb(0, 157, 255), rgb(39, 144, 186));
+}
+.blog-box-btn-actv {
+  color: #000000;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, #008cff, #a1f4ff);
+}
 .player-news-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  width: 80%;
+  width: 72%;
   margin: 20px 0;
 }
 .player-news {
   width: 95%;
+  height: 340px;
   /* gap: 30px; */
   background-color: white;
-  box-shadow: 0.5px 0.5px 10px black;
+  box-shadow: 0px 0px 6px rgb(112, 112, 112);
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
 }
 .player-news img {
   width: 100%;
+  height: 150px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
 .player-news-blog {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.transfer-btn {
+  width: 35%;
+  color: white;
+  background-color: #02364f;
+  padding: 5px;
+  font-size: 0.75rem;
+}
+
+.player-news-comment-section {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.view-more {
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(180deg, #00294b, #14134c);
+  color: white;
+  transition: 0.8s;
+  width: 140px;
+  text-align: center;
+  margin: 10px;
 }
 /*------------------------- main-blog end------------------------------ */
 
@@ -139,7 +184,9 @@ font-family: 'Ubuntu', sans-serif;
   padding: 140px;
   gap: 60px;
   font-family: "Ubuntu", sans-serif;
-  margin-top: 60px;
+}
+.footer-head {
+  font-size: 1.4rem;
 }
 .footer-hr {
   border-bottom: 1px solid #000000;
@@ -147,37 +194,99 @@ font-family: 'Ubuntu', sans-serif;
 }
 .footer-links {
   display: flex;
-  column-gap: 14px;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 20px;
+  justify-content: center;
+}
+.footer-link {
+  text-decoration: none;
+  color: silver;
 }
 .footer-link:hover {
   color: rgb(0, 255, 217);
   font-size: 1.3em;
 }
+
 /* -----------------------Footer ends-------------------- */
 
 /*---------------- general style end------------------------------------------ */
-/* Media Query for Mobile Devices */
+
+/*--------------------- Media Query for Mobile Devices starts----------- */
 @media screen and (max-width: 480px) {
   body {
     background-color: red;
   }
 }
+/*--------------------- Media Query for Mobile Devices ends----------- */
 
-/* Media Query for low resolution  Tablets, Ipads */
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  body {
+/*----------------------- Media Query for Tablets,high  Ipads starts-----------------------*/
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  /* body {
     background-color: yellow;
+  } */
+  .main-container {
+    width: 100%;
+  }
+  #header {
+    font-size: 0.7rem;
+    padding: 0 10px;
+    column-gap: 0;
+  }
+  .header-blog {
+    width: 90%;
+    padding: 30px 0;
+  }
+  .header-blog-h1 {
+    font-size: 1.3rem;
+  }
+  .header-blog-p {
+    white-space: wrap;
+    overflow: hidden;
+    height: auto;
+    text-overflow: ellipsis;
+  }
+  .header-blog-button {
+    width: 140px;
+  }
+  .header-blog-img {
+    width: 100%;
+  }
+  .main-blog {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+  .blog-box {
+    flex-direction: row;
+    background-color: inherit;
+    align-items: center;
+    margin: 40px;
+    padding: 0;
+    height: 0;
+    width: auto;
+  }
+  .blog-box-btn {
+    width: 140px;
+    font-size: 0.9rem;
+  }
+  .player-news-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .player-extra {
+    display: none;
+  }
+  .view-more {
+    display: block;
+  }
+  .footer {
+    display: none;
   }
 }
+/*----------------------- Media Query for Tablets,high  Ipads ends -----------------------*/
 
-/* Media Query for Tablets Ipads portrait mode */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: blue;
-  }
-}
-
-/* Media Query for Laptops and Desktops */
+/*------------------ Media Query for Laptops and Desktops starts--------------------- */
 @media screen and (min-width: 1025px) {
   .body {
     background-image: linear-gradient(
@@ -186,13 +295,18 @@ font-family: 'Ubuntu', sans-serif;
       rgb(255, 255, 255)
     );
   }
+  #header:hover {
+    background-image: linear-gradient(120deg, #004e92, #030a4d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    font-size: large;
+  }
   .header-blog button {
     width: 30%;
   }
-  .blog-box-btn-actv {
-    color: #000000;
-    font-size: 1.1em;
-    font-weight: bold;
-    background-image: linear-gradient(120deg, #00aaff, #a1f4ff);
+  .view-more {
+    display: none;
   }
 }
+/*------------------ Media Query for Laptops and Desktops ends--------------------- */
