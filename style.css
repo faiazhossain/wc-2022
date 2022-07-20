@@ -35,7 +35,7 @@ html {
 /*------------------ Header part------------------------ */
 #header {
   display: flex;
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   align-items: center;
   gap: 30px;
   padding: 0 50px;
@@ -127,6 +127,7 @@ html {
   gap: 10px;
   width: 72%;
   margin: 20px 0;
+  justify-items: center;
 }
 .player-news {
   width: 95%;
@@ -213,10 +214,198 @@ html {
 
 /*---------------- general style end------------------------------------------ */
 
-/*--------------------- Media Query for Mobile Devices starts----------- */
-@media screen and (max-width: 480px) {
-  body {
-    background-color: red;
+/*--------------------- Media Query for extra small Mobile Devices starts----------- */
+
+@media screen and (max-width: 200px) {
+  .main-container {
+    width: 100%;
+  }
+  #header {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.5rem;
+    padding: 0 10px;
+    column-gap: 0;
+  }
+  .header-blog {
+    align-items: center;
+    width: 100%;
+    /* padding: 30px 0; */
+  }
+  .header-blog-h1 {
+    font-size: 1rem;
+  }
+
+  .header-blog-button {
+    width: auto;
+  }
+  .header-blog-img {
+    width: 100%;
+  }
+  .main-blog {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+  .blog-box {
+    flex-direction: column;
+    background-color: inherit;
+    align-items: center;
+    margin: 40px;
+    padding: 0;
+    height: auto;
+    width: 100%;
+  }
+  .blog-box-btn {
+    width: auto;
+    font-size: 0.9rem;
+  }
+  .player-news-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 92%;
+    margin: 20px 0;
+  }
+  .player-news {
+    height: auto;
+  }
+  .player-news img {
+    height: 100%;
+    width: 100%;
+  }
+  .article-btn {
+    width: auto;
+  }
+
+  .view-more {
+    display: none;
+  }
+
+  .footer {
+    padding: 50px;
+    gap: 16px;
+  }
+  .footer-head {
+    font-size: 0.7rem;
+  }
+  .footer-hr {
+    width: 100%;
+  }
+  .footer-links {
+    flex-direction: column;
+    column-gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-link {
+    text-decoration: none;
+    color: silver;
+    font-size: 0.7rem;
+  }
+  .footer-link:hover {
+    color: rgb(0, 255, 217);
+    font-size: 0.9rem;
+  }
+}
+/*--------------------- Media Query for extra small Mobile Devices ends----------- */
+
+/*--------------------- Media Query for small Mobile Devices starts----------- */
+
+@media screen and (min-width: 201px) and (max-width: 480px) {
+  .main-container {
+    width: 100%;
+  }
+  #header {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+    padding: 0 10px;
+    column-gap: 0;
+  }
+  .header-blog {
+    align-items: center;
+    width: 90%;
+    padding: 30px 0;
+  }
+  .header-blog-h1 {
+    font-size: 1.3rem;
+  }
+  .header-blog-p {
+    white-space: wrap;
+    overflow: hidden;
+    height: auto;
+    text-overflow: ellipsis;
+  }
+  .header-blog-button {
+    width: 140px;
+  }
+  .header-blog-img {
+    width: 100%;
+  }
+  .main-blog {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .blog-box {
+    flex-direction: column;
+    background-color: inherit;
+    align-items: center;
+    margin: 40px;
+    padding: 0;
+    height: auto;
+    width: 100%;
+  }
+  .blog-box-btn {
+    width: 140px;
+    font-size: 0.9rem;
+  }
+  .player-news-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 92%;
+    margin: 20px 0;
+  }
+  .player-news {
+    height: auto;
+  }
+  .player-news img {
+    height: 200px;
+  }
+  .article-btn {
+    width: 180px;
+  }
+
+  .view-more {
+    display: none;
+  }
+
+  .footer {
+    padding: 50px;
+    gap: 16px;
+  }
+  .footer-head {
+    font-size: 0.9rem;
+  }
+  .footer-hr {
+    width: 90%;
+  }
+  .footer-links {
+    flex-direction: column;
+    column-gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-link {
+    text-decoration: none;
+    color: silver;
+    font-size: 1rem;
+  }
+  .footer-link:hover {
+    color: rgb(0, 255, 217);
+    font-size: 1.3em;
   }
 }
 /*--------------------- Media Query for Mobile Devices ends----------- */
@@ -308,13 +497,12 @@ html {
   }
   .footer-links {
     column-gap: 12px;
-
     justify-content: center;
   }
   .footer-link {
     text-decoration: none;
     color: silver;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .footer-link:hover {
     color: rgb(0, 255, 217);
